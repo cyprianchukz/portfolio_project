@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Money Tour</title>
+    <meta name="description" content="Login-Register Page">
+    <meta name="author" content="Cypee">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons">lock</i> Login
+        </div>
+
+        <form>
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="username" placeholder="Username" type="text" required autocomplete="off">
+            </div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="Password" type="password" required autocomplete="off">
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me"><span>Remember Me</span></label>
+            </div>
+
+            <input type="submit" value="Log In">
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+        <br><br>
+
+        <div class="register">
+            <span>Don't have an account yet?</span>
+            <a href="./register.html"><button id="register-link">Register here</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
