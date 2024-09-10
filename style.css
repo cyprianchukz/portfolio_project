@@ -8,7 +8,7 @@ body {
     height: 100vh;
 }
 
-#container-register {
+#container-register, #container-register {
     background-color: white;
     padding: 40px;
     width: 100%;
@@ -46,7 +46,7 @@ body {
 }
 
 .input input {
-    width: 100%;
+    width: 87%;
     padding: 10px 10px 10px 40px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -74,12 +74,12 @@ body {
     color: #757575;
 }
 
-.privacy, .register {
+.privacy, .register, .forgot-password {
     text-align: center;
     margin-top: 20px;
 }
 
-.privacy a, .register a {
+.privacy a, .register a, .forgot-password a {
     text-decoration: none;
     color: #007BFF;
 }
