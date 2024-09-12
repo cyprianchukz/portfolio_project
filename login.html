@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css"> 
 </head>
+    <div class="back-to-home">
+        <a href="home.html" class="back-home-btn">Back to Home</a>
+    </div>
 
 <body>
     <div id="container-login">
-        <div id="title">
-            <i class="material-icons">lock</i> Login
-        </div>
+        <div id="title">Login</div>
 
         <form>
             <div class="input">
@@ -36,9 +37,16 @@
                 <input type="checkbox" id="remember-me">
                 <label for="remember-me"><span>Remember Me</span></label>
             </div>
+              
+         <!--   <input type="submit" value="Log In"> -->
 
-            <input type="submit" value="Log In">
+            <div class="input-login">
+                <a href="index.html" class="input-login-btn">Log In</a>
+            </div> 
+            
         </form>
+
+        <br><br>
 
         <div class="forgot-password">
             <a href="#">Forgot your password?</a>

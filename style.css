@@ -1,3 +1,6 @@
+
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,8 +11,8 @@ body {
     height: 100vh;
 }
 
-#container-register, #container-register {
-    background-color: white;
+#container-register, #container-login {
+    background-color: rgb(255, 255, 255);
     padding: 40px;
     width: 100%;
     max-width: 400px;
@@ -112,3 +115,47 @@ input[type="submit"]:hover {
         padding: 20px;
     }
 }
+
+.back-to-home {
+    text-align: center; /* Center the button */
+    margin-top: 10px; /* Adjust the spacing above the button */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .back-home-btn {
+    text-decoration: none;
+    font-weight: 1500;
+    color: white;
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    padding: 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-home-btn:hover {
+    background-color: rgba(0, 86, 179, 0.9); /* Slightly less transparent on hover */
+  }
+  
+  .input-login {
+    text-align: center; /* Center the button */
+    margin-top: 10px; /* Adjust the spacing above the button */
+    position: absolute;
+    
+    
+  }
+  
+  .input-login-btn {
+    text-decoration: none;
+    font-weight: 1500;
+    color: white;
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    padding: 13px 178px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-login-btn:hover {
+    background-color: rgba(0, 86, 179, 0.9); /* Slightly less transparent on hover */
+  }

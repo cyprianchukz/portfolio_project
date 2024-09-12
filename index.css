@@ -245,3 +245,25 @@ h3 {
   color: var(--transaction-color);
   font-size: 1.5rem;
 }
+
+.back-to-home {
+  text-align: center; /* Center the button */
+  margin-top: 10px; /* Adjust the spacing above the button */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.back-home-btn {
+  text-decoration: none;
+  font-weight: 1500;
+  color: white;
+  background-color: rgba(58, 61, 190, 0.8); /* Semi-transparent background */
+  padding: 10px 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: rgba(43, 45, 153, 0.9); /* Slightly less transparent on hover */
+}
