@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+      :root {
+        --bg-color: #f6f8fa;
+        --text-color: #1d1f27;
+        --main-color: #3a3dbe;
+        --button-bg: #3a3dbe;
+        --button-color: #fff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+      }
+
+      .top-nav {
+        position: absolute;
+        top: 15px;
+        right: 1px;
+      }
+
+      .top-nav a {
+        text-decoration: none;
+        font-weight: 1500;
+        color: var(--button-color);
+        background-color: rgba(25, 153, 238, 0.7);
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-right: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .top-nav a:hover {
+        background-color: #084299;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .logo {
+        margin-top: 50px;
+      }
+
+      .logo img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+      }
+
+      .about {
+        margin-top: 20px;
+        max-width: 500px;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      footer {
+        margin-bottom: 20px;
+        font-size: 0.85rem;
+        color: #999;
+      }
+
+      #container-home {
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        width: 100%;
+        max-width: 800px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        margin-top: 40px;
+    }

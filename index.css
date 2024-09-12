@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-  --bg-color: #f6f8fa;
-  --text-color: #1d1f27;
-  --main-color: #3a3dbe;
+  --bg-color: #c8dbe6;
+  --text-color: #06075f;
+  --main-color: #0813b1;
+  
 }
 
 * {
@@ -237,4 +238,10 @@ ul li:hover .action {
 #status {
   text-align: center;
   margin-bottom: 0.5rem;
+}
+
+h3 {
+  text-align: center;
+  color: var(--transaction-color);
+  font-size: 1.5rem;
 }
