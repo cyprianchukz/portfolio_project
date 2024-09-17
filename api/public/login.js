@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (response.ok) {
                     // Store token in localStorage (simulating session)
-                    localStorage.setItem('token', result.token);
+                 //   localStorage.setItem('token', result.token);
                     alert("Login successful!");
                     window.location.href = 'index.html'; // Redirect to index.html
                 } else {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backHomeBtn = document.querySelector('.back-home-btn');
     if (backHomeBtn) {
         backHomeBtn.addEventListener('click', function () {
-            localStorage.removeItem('token'); // Log out user
+          //  localStorage.removeItem('token'); // Log out user
             window.location.href = 'login.html'; // Redirect to login page
         });
     }

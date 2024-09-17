@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+//const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
@@ -35,10 +35,10 @@ db.connect(err => {
 });
 
 // Secret key for JWT
-const JWT_SECRET = process.env.JWT_SECRET;
+// const JWT_SECRET = process.env.JWT_SECRET;
 
 // Helper function to authenticate user by token
-const authenticateToken = (req, res, next) => {
+/* const authenticateToken = (req, res, next) => {
   const token = req.headers['authorization'];
 
   if (!token) return res.sendStatus(403);
@@ -48,7 +48,7 @@ const authenticateToken = (req, res, next) => {
     req.user = user;
     next();
   });
-};
+}; */
 
 // Routes
 
@@ -114,11 +114,11 @@ app.post('/api/login', (req, res) => {
 
       if (isMatch) {
         // Generate a JWT token
-        const token = jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, {
+      /*  const token = jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, {
           expiresIn: '1h'
-        });
+        }); */
 
-        res.json({ message: 'Login successful!', token });
+        res.json({ message: 'Login successful!' });
       } else {
         res.status(400).json({ message: 'Invalid username or password.' });
       }
@@ -128,46 +128,50 @@ app.post('/api/login', (req, res) => {
 
 // 3. Add a Transaction
 app.post('/api/transactions', (req, res) => {
-  const { type, particulars, amount, date } = req.body;
-  const userId = req.userid;
+  const { type, particulars, amount, date, } = req.body; // Expect userId to be sent in request body
 
   if (!type || !particulars || !amount || !date) {
     return res.status(400).json({ message: 'Please provide all fields.' });
   }
 
-  const sql = 'INSERT INTO transactions (user_id, type, particulars, amount, date) VALUES (?, ?, ?, ?, ?)';
-  db.query(sql, [userId, type, particulars, amount, date], (err, result) => {
+  const sql = 'INSERT INTO transactions (type, particulars, amount, date) VALUES (?, ?, ?, ?)';
+  db.query(sql, [ type, particulars, amount, date], (err, result) => {
     if (err) throw err;
     res.json({ message: 'Transaction added successfully!' });
   });
 });
 
-// 4. Get Transactions for Logged-in User
-app.get('/api/transactions', authenticateToken, (req, res) => {
-  const userId = req.user.id;
 
-  const sql = 'SELECT * FROM transactions WHERE user_id = ?';
-  db.query(sql, [userId], (err, results) => {
-    if (err) throw err;
+// 4. Get All Transactions
+app.get('/api/transactions', (req, res) => {
+  const sql = 'SELECT * FROM transactions'; 
+
+  db.query(sql, (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to retrieve transactions' });
+    }
     res.json(results);
   });
 });
 
+
 // 5. Get User Balance
-app.get('/api/balance', authenticateToken, (req, res) => {
-  const userId = req.user.id;
+app.get('/api/balance', (req, res) => {
+  const sqlIncome = 'SELECT SUM(amount) as totalIncome FROM transactions WHERE type = "income"';
+  const sqlExpense = 'SELECT SUM(amount) as totalExpense FROM transactions WHERE type = "expense"';
 
-  const sqlIncome = 'SELECT SUM(amount) as totalIncome FROM transactions WHERE user_id = ? AND type = "income"';
-  const sqlExpense = 'SELECT SUM(amount) as totalExpense FROM transactions WHERE user_id = ? AND type = "expense"';
-
-  db.query(sqlIncome, [userId], (err, incomeResult) => {
+  db.query(sqlIncome, (err, incomeResult) => {
     if (err) throw err;
 
-    db.query(sqlExpense, [userId], (err, expenseResult) => {
+    db.query(sqlExpense, (err, expenseResult) => {
       if (err) throw err;
 
       const balance = (incomeResult[0].totalIncome || 0) - (expenseResult[0].totalExpense || 0);
-      res.json({ balance });
+      res.json({
+        balance,
+        totalIncome: incomeResult[0].totalIncome || 0,
+        totalExpense: expenseResult[0].totalExpense || 0
+      });
     });
   });
 });
