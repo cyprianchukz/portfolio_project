@@ -43,4 +43,6 @@ This is a full-stack Money-Tour web application built using **Node.js**, **Expre
 Security: Passwords are hashed before storing in the database using bcrypt, and JWT tokens are used to authenticate users for protected routes.
 Error Handling: The backend returns proper status codes and error messages for invalid requests or credentials.
 Frontend: The frontend HTML files handle the UI and make API calls to the backend for registration, login, and accessing the index page.
+The backend uses Express and MySQL to register, log in, and access the protected index page.
+
 
