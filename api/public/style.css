@@ -140,9 +140,7 @@ input[type="submit"]:hover {
   
   .input-login {
     text-align: center; /* Center the button */
-    margin-top: 10px; /* Adjust the spacing above the button */
     position: absolute;
-    
     
   }
   
@@ -159,6 +157,3 @@ input[type="submit"]:hover {
   .input-login-btn:hover {
     background-color: rgba(0, 86, 179, 0.9); /* Slightly less transparent on hover */
   }
-
-
-
