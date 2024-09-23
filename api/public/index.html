@@ -15,31 +15,21 @@
     </div>
 
     <main>
-      <header>
-        
+      <header> 
         <div>
           <h5>Balance</h5>
           <span id="balance">$0.00</span>
         </div>
-        <div>
-      <!--    <h5>Income</h5>
-          <span id="income">$0.00</span>
-        </div>
-    
-        <div>
-          <h5>Expense</h5>
-          <span id="expense">$0.00</span>
-        </div> -->
       </header>
 
       <section>
         <h3>TRANSACTIONS</h3>
         <ul id="transactionList"></ul>
-        <div id="status"></div>
+        
       </section>
 
       <section>
-        <h4>Add A Transaction</h4>
+        <h4>Add Transaction</h4>
 
         <form id="transactionForm">
           <div>
@@ -71,9 +61,13 @@
             <input type="date" name="date" required />
           </div>
 
-          <button type="submit">Submit</button>
-          
+          <button type="submit">Submit</button>       
         </form>
+
+        <!-- Add the "Added transactions" link -->
+        <div class="view-transactions">
+          <a href="transactions.html" class="view-transactions-btn">View Transactions</a>
+        </div>
       </section>
     </main>
 

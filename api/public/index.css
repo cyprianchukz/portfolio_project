@@ -258,12 +258,94 @@ h3 {
   text-decoration: none;
   font-weight: 1500;
   color: white;
-  background-color: rgba(58, 61, 190, 0.8); 
+  background-color: rgba(12, 51, 158, 0.8); 
   padding: 10px 10px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
 .back-home-btn:hover {
-  background-color: rgba(43, 45, 153, 0.9); 
+  background-color: rgba(4, 5, 66, 0.9); 
 }
+
+.view-transactions {
+  text-align: center; /* Center the button */
+  position: relative;
+}
+
+.view-transactions-btn {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  background-color: #0813b1; 
+  padding: 5px 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-transactions-btn:hover {
+  background-color: rgba(4, 80, 110, 0.9); 
+}
+
+.transHeading {
+  text-align: center;
+  color: #042049;
+  margin-bottom: 20px;
+}
+
+/* Container for the table */
+.container-transaction {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #555;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add some spacing to buttons or any action elements */
+.actions {
+  margin-top: 15px;
+  text-align: right;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+
+  th, td {
+      padding: 10px;
+  }
+}
+
