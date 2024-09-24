@@ -12,6 +12,14 @@ body {
     height: 100vh;
 }
 
+.background {
+    height: 100vh;
+    background-image: url('./MoneyTour.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .top-nav {
     position: absolute;
     top: 20px;
@@ -33,32 +41,13 @@ body {
     background-color: #084299;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
 .logo {
     margin-top: 120px;
 }
 
 .logo img {
-    width: 600px;
-    height: 150px;
-    object-fit: fill;
-}
-
-.logocenter {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-}
-
-.logocenter img {
-    width: 210px;
-    height: 120px;
+    width: 300px;
+    height: 180px;
     object-fit: fill;
 }
 
@@ -66,8 +55,8 @@ body {
     background-color: #fff;
     padding: 10px;
     width: 100%;
-    max-width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 16px;
     text-align: center;
     display: flex;

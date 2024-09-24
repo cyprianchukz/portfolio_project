@@ -2,7 +2,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,12 +10,20 @@ body {
     
 }
 
+.background {
+    height: 100vh;
+    background-image: url('./MoneyTour.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 #container-register, #container-login {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(236, 231, 231);
     padding: 40px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
 }
 
@@ -32,7 +39,7 @@ body {
 
 #title i {
     margin-right: 10px;
-    color: #007BFF;
+    color: #530450;
 }
 
 .input {
@@ -58,8 +65,10 @@ body {
 }
 
 .input input:focus {
-    border-color: #007BFF;
     outline: none;
+    border: 2px solid #530450;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .remember-me {
@@ -84,13 +93,13 @@ body {
 
 .privacy a, .register a, .forgot-password a {
     text-decoration: none;
-    color: #007BFF;
+    color: #530450;
 }
 
 .register button {
     background-color: transparent;
     border: none;
-    color: #007BFF;
+    color: #530450;
     cursor: pointer;
     font-weight: bold;
 }
@@ -98,7 +107,7 @@ body {
 input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #530450;
     color: white;
     border: none;
     border-radius: 4px;
@@ -107,7 +116,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #771174;
 }
 
 @media (max-width: 768px) {
@@ -128,14 +137,14 @@ input[type="submit"]:hover {
     text-decoration: none;
     font-weight: 1500;
     color: white;
-    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent background */
+    background-color: rgba(119, 9, 124, 0.8); /* Semi-transparent background */
     padding: 10px 10px;
     border-radius: 10px;
     transition: background-color 0.3s ease;
   }
   
   .back-home-btn:hover {
-    background-color: rgba(0, 86, 179, 0.9); /* Slightly less transparent on hover */
+    background-color: rgba(151, 3, 192, 0.9); /* Slightly less transparent on hover */
   }
   
   .input-login {
