@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body class="background">
-    <h1>MONEY-TOUR</h1>
-    <h5>A Tour To Monitor Your Money</h5>
+    <div class="toptier">
+      <h1>MONEY-TOUR</h1>
+      <h5>A Tour To Monitor Your Money</h5>
+    </div>
+
     <div class="back-to-home">
       <a href="home.html" class="back-home-btn">Back to Home</a>
     </div>
-
+ 
     <main>
       <header> 
         <div>
@@ -30,6 +33,11 @@
 
       <section>
         <h4>Add Transaction</h4>
+        
+        <!-- Add the "view transactions" link -->
+        <div class="view-transactions">
+          <a href="transactions.html" class="view-transactions-btn">View Transactions</a>
+        </div>
 
         <form id="transactionForm">
           <div>
@@ -41,10 +49,12 @@
               </div>
             </label>
           </div>
+          
           <div>
             <label for="name">Detail of transaction</label>
             <input type="text" name="particulars" required />
           </div>
+
           <div>
             <label for="amount">Amount</label>
             <input
@@ -63,11 +73,6 @@
 
           <button type="submit">Submit</button>       
         </form>
-
-        <!-- Add the "view transactions" link -->
-        <div class="view-transactions">
-          <a href="transactions.html" class="view-transactions-btn">View Transactions</a>
-        </div>
       </section>
     </main>
 
