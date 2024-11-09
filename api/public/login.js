@@ -21,10 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const result = await response.json();
                 
                 if (response.ok) {
-                    // Store token in localStorage (simulating session)
-                 //   localStorage.setItem('token', result.token);
                     alert("Login successful!");
-                    window.location.href = 'index.html'; // Redirect to index.html
+                    window.location.href = 'dashboard.html'; // Redirect to index.html
                 } else {
                     alert(result.message || "Login failed.");
                 }
@@ -32,15 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert("An error occurred while logging in.");
                 console.error(error);
             }
-        });
-    }
-
-    // Logout logic
-    const backHomeBtn = document.querySelector('.back-home-btn');
-    if (backHomeBtn) {
-        backHomeBtn.addEventListener('click', function () {
-          //  localStorage.removeItem('token'); // Log out user
-            window.location.href = 'login.html'; // Redirect to login page
         });
     }
 });

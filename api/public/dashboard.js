@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const transactionForm = document.getElementById('transactionForm');
     const transactionList = document.getElementById('transactionList');
     const balanceDisplay = document.getElementById('balance');
-    const incomeDisplay = document.getElementById('income');
-    const expenseDisplay = document.getElementById('expense');
 
     // Fetch and display balance
     async function fetchBalance() {

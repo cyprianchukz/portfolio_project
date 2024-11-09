@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
 const bcrypt = require('bcryptjs');
-//const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
@@ -34,23 +33,7 @@ db.connect(err => {
   console.log('MySQL Connected...');
 });
 
-// Secret key for JWT
-// const JWT_SECRET = process.env.JWT_SECRET;
-
-// Helper function to authenticate user by token
-/* const authenticateToken = (req, res, next) => {
-  const token = req.headers['authorization'];
-
-  if (!token) return res.sendStatus(403);
-
-  jwt.verify(token, JWT_SECRET, (err, user) => {
-    if (err) return res.sendStatus(403);
-    req.user = user;
-    next();
-  });
-}; */
-
-// Routes
+// Routes:
 
 // 1. Register User
 app.post('/api/register', (req, res) => {
@@ -113,11 +96,6 @@ app.post('/api/login', (req, res) => {
       if (err) throw err;
 
       if (isMatch) {
-        // Generate a JWT token
-      /*  const token = jwt.sign({ id: user.id, username: user.username }, JWT_SECRET, {
-          expiresIn: '1h'
-        }); */
-
         res.json({ message: 'Login successful!' });
       } else {
         res.status(400).json({ message: 'Invalid username or password.' });

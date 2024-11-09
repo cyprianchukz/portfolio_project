@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
             transactions.forEach(transaction => {
                 const row = transactionTable.insertRow();
                 
-                const idCell = row.insertCell(0);
+                const transaction_idCell = row.insertCell(0);
                 const typeCell = row.insertCell(1);
                 const particularsCell = row.insertCell(2);
                 const amountCell = row.insertCell(3);
                 const dateCell = row.insertCell(4);
 
-                idCell.textContent = transaction.id;
+                transaction_idCell.textContent = transaction.transaction_id;
                 typeCell.textContent = transaction.type;
                 particularsCell.textContent = transaction.particulars;
                 amountCell.textContent = `$${parseFloat(transaction.amount).toFixed(2)}`;
