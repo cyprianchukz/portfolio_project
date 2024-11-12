@@ -239,6 +239,21 @@ h3 {
 
 /* TRANSACTIONS HISTORY SECTION */
 
+.transbalance {
+  background-color: #61075e;
+  color: #ffffff;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.transbalance span {
+  flex-basis: 100%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 /* Container for the table */
 .container-transaction {
   width: 100%;
