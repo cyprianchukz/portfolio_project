@@ -23,7 +23,7 @@ body {
 
 .top-nav {
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 10px;
 }
 
@@ -31,7 +31,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     color: whitesmoke;
-    background-color: rgba(148, 17, 255, 0.7);
+    background-color: rgba(206, 14, 206, 0.7);
     padding: 8px 15px;
     border-radius: 8px;
     margin-right: 10px;
@@ -39,7 +39,7 @@ body {
 }
 
 .top-nav a:hover {
-    background-color: #a50aa0;
+    background-color: #5e105b;
 }
 
 .logo {
