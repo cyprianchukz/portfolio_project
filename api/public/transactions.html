@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="dashboard.css" />
   </head>
   <body class="background">
-    <h1>TRANSACTION HISTORY</h1>
     <div class="back-to-home">
       <a href="dashboard.html" class="back-home-btn">Add Transaction</a>
       <a href="home.html" class="back-home-btn">Logout</a>
+    </div>
+  
+    <h1>TRANSACTION HISTORY</h1>
+    <div class="transbalance">
+      <p>Balance</p>
+      <span id="balance">$0.00</span>
     </div>
     <div class="container-transaction">
       <table id="transactionTable" border="1">
@@ -31,5 +36,6 @@
     </div>
 
     <script src="transactions.js"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>
