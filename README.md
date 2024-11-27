@@ -23,28 +23,6 @@ Money Tour is a full-stack web application designed to help users manage and tra
 Session Management: Uses sessions to manage user authentication and secure data access.
 - **Responsive Design**: The front-end is designed to work across various devices when logged in through a web browser.
 
-## T
-Here’s a sample README file for the "Money Tour" project:
-
-Money Tour
-Money Tour is a full-stack web application designed to help users manage and track their expenses and income. It allows users to register, log in, add transactions (income and expenses), view their transaction history, and see their current balance. The project uses a MySQL database to store user and transaction data and includes user authentication, database management, and data retrieval with a dynamic, interactive frontend interface.
-
-Table of Contents
-Features
-Technologies Used
-Getting Started
-API Endpoints
-Database Schema
-Testing and Debugging
-Future Improvements
-Features
-User Registration and Login: Secure registration and login functionality with password hashing.
-Transaction Management: Users can add, view, and manage their transactions.
-Balance Overview: Displays the current balance, total income, and total expenses.
-Transaction History: A table view of all transactions with details like type, amount, date, and particulars.
-Session Management: Uses sessions to manage user authentication and secure data access.
-Error Handling: Graceful error handling and user feedback on errors.
-
 ## Technologies Used
 
 ### Frontend
