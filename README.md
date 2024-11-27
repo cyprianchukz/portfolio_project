@@ -82,8 +82,8 @@ Here are the main API endpoints for the application:
 | Column   | Type                         | Description            |
 |----------|------------------------------|------------------------|
 | user_id  | INT, Primary Key, Auto Increment | Unique user identifier |
-| email    | VARCHAR(255)                 | User email             |
-| username | VARCHAR(50)                  | Unique username        |
+| email    | VARCHAR(50)                 | User email             |
+| username | VARCHAR(20)                  | Unique username        |
 | password | VARCHAR(255)                 | Hashed user password   |
 
 #### Transactions Table
@@ -92,7 +92,7 @@ Here are the main API endpoints for the application:
 |transaction_id	| INT, Primary Key, Auto Increment | Unique transaction identifier      |
 |user_id	    | INT, Foreign Key (references users.user_id) | Associated user identifier |
 |type	        | ENUM ('income', 'expense')        | Type of transaction   |
-|particulars    | VARCHAR(255)	                    | Transaction details   |
+|particulars    | VARCHAR(50)	                    | Transaction details   |
 |amount	        | DECIMAL(10, 2)                    | Transaction amount    |
 |date	        | DATE                          	| Date of transaction   |
 
